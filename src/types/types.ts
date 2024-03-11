@@ -163,10 +163,9 @@ export interface HomeListProps {
 }
 
 export interface AttachmentInputPopUp {
-  handleImageThrougGallery: void
-  handleImageThroughCamera:void
+  handleImageThrougGallery: void;
+  handleImageThroughCamera: void;
 }
-
 
 export interface TransactionCardProps {
   id: string;
@@ -197,4 +196,6 @@ export interface UpdateUserProps {
   handleAlertVisible: () => void;
   message: string;
   alertVisible: boolean;
+  user: any;
+  error: string | null;
 }

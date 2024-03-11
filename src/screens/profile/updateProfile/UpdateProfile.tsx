@@ -22,7 +22,7 @@ import {styles} from './styles';
 
 const UpdateProfile = () => {
   const dispatch = useDispatch();
-  const {user, isLoading, error} = useSelector((state: any) => state.user);
+  // const {user, isLoading, error} = useSelector((state: any) => state.user);
   const {
     displayName,
     setDisplayName,
@@ -37,6 +37,9 @@ const UpdateProfile = () => {
     message,
     alertVisible,
     handleAlertVisible,
+    user,
+    isLoading,
+    error,
   } = useUpdateProfile(); // Use the custom hook
 
   useEffect(() => {
@@ -96,7 +99,10 @@ const UpdateProfile = () => {
           />
         </View>
         <View style={styles.updateProfileBtn}>
-          <AppButton title={'Update Profile'} onPress={handleUpdateProfile} />
+          <AppButton
+            title={isLoading ? `Updating` : `update Profile`}
+            onPress={handleUpdateProfile}
+          />
         </View>
       </View>
       <Modal
