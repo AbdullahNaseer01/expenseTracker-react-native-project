@@ -14,29 +14,7 @@ import {TransactionInterface} from '../../types/types';
 import Navigation from '../../navigation/Navigation';
 import {useNavigation} from '@react-navigation/native';
 
-interface TransactionDetailHook {
-  handleDelete: (transactionType: string, docId: string) => Promise<void>;
-  handleEdit: () => Promise<void>;
-  editableCategory: string;
-  setEditableCategory: React.Dispatch<React.SetStateAction<string>>;
-  editableTransactionType: string;
-  setEditableTransactionType: React.Dispatch<React.SetStateAction<string>>;
-  editableDescription: string;
-  setEditableDescription: React.Dispatch<React.SetStateAction<string>>;
-  editableMoney: string;
-  setEditableMoney: React.Dispatch<React.SetStateAction<string>>;
-  typeModalVisible: boolean;
-  setTypeModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
-  categoryModalVisible: boolean;
-  setCategoryModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
-  transactionTypes: string[];
-  setConfirmAlert: React.Dispatch<React.SetStateAction<boolean>>;
-  confirmAlert: boolean;
-  handleCancelDelete: any;
-  alert: boolean;
-  setAlert: React.Dispatch<React.SetStateAction<boolean>>;
-  alertMessage: string;
-}
+import {TransactionDetailHook} from '../../types/types';
 
 const useTransactionDetail = (
   transactionData: TransactionInterface,

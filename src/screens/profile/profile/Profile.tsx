@@ -11,21 +11,17 @@ import {styles} from './styles';
 
 const ProfileHome: React.FC = () => {
   const navigation = useNavigation();
-  const {confirmAlert, setConfirmAlert, handleSignOut, handleCancelSignOut} =
-    useProfile();
-
-  const dispatch = useDispatch();
-  const {user, isLoading, error} = useSelector(
-    (state: RootState) => state.user,
-  );
-
-  // Fetch user data upon component mount
-  useEffect(() => {
-    dispatch(fetchUserData() as any);
-  }, [dispatch]);
+  const {
+    confirmAlert,
+    setConfirmAlert,
+    handleSignOut,
+    handleCancelSignOut,
+    user,
+    isLoading,
+    error,
+  } = useProfile();
 
   // Re-render when user data changes (including initially getting populated)
-
 
   return (
     <View style={styles.mainContainer}>
