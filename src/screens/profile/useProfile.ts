@@ -2,9 +2,9 @@ import {useState, useEffect} from 'react';
 import auth from '@react-native-firebase/auth';
 import { ToastAndroid } from 'react-native';
 import { useDispatch } from 'react-redux';
-import { fetchUserData } from '../../../store/slices/userSlice';
+import { fetchUserData } from '../../store/slices/userSlice';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../store/store';
+import { RootState } from '../../store/store';
 // import
 const useProfile = () => {
   const [confirmAlert, setConfirmAlert] = useState(false);

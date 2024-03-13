@@ -1,11 +1,11 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 
-import ConfirmAlert from '../../../components/ConfirmAlert';
+import ConfirmAlert from '../../components/ConfirmAlert';
 import useProfile from './useProfile';
 import {useDispatch, useSelector} from 'react-redux';
-import {RootState} from '../../../store/store';
-import {fetchUserData} from '../../../store/slices/userSlice';
+import {RootState} from '../../store/store';
+import {fetchUserData} from '../../store/slices/userSlice';
 import {useNavigation} from '@react-navigation/native';
 import {styles} from './styles';
 
@@ -36,7 +36,7 @@ const ProfileHome: React.FC = () => {
             ) : (
               <Image
                 style={styles.ProfileImage}
-                source={require('../../../assets/user.png')}
+                source={require('../../assets/user.png')}
               />
             )}
           </View>
@@ -52,7 +52,7 @@ const ProfileHome: React.FC = () => {
         </View>
         <TouchableOpacity
           onPress={() => navigation.navigate('UpdateProfile' as never)}>
-          <Image source={require('../../../assets/edit.png')} />
+          <Image source={require('../../assets/edit.png')} />
         </TouchableOpacity>
       </View>
       <View style={styles.cardContainer}>
@@ -61,7 +61,7 @@ const ProfileHome: React.FC = () => {
             <View style={styles.actionImgContainer}>
               <Image
                 style={styles.actionImage}
-                source={require('../../../assets/setting.png')}
+                source={require('../../assets/setting.png')}
               />
             </View>
             <View>
@@ -74,7 +74,7 @@ const ProfileHome: React.FC = () => {
             <View style={styles.actionImgContainer}>
               <Image
                 style={styles.actionImage}
-                source={require('../../../assets/warning.png')}
+                source={require('../../assets/warning.png')}
               />
             </View>
             <View>
@@ -88,7 +88,7 @@ const ProfileHome: React.FC = () => {
             <View style={styles.actionImgContainer}>
               <Image
                 style={styles.actionImage}
-                source={require('../../../assets/logout.png')}
+                source={require('../../assets/logout.png')}
               />
             </View>
             <View>

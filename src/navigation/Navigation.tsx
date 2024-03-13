@@ -8,7 +8,7 @@ import LoginScreen from '../screens/auth/login/Login';
 import ForgetPassScreen from '../screens/auth/forgetPassword/ForgetPassword';
 import Home from '../screens/home/Home';
 import Transaction from '../screens/transactions/Transactions';
-import ProfileHome from '../screens/profile/profile/Profile';
+import ProfileHome from '../screens/profile/Profile';
 import ResetPassword from '../screens/profile/resetPassword/ResetPassword';
 import CreateTransaction from '../screens/createTransaction/CreateTransaction';
 import UpdateProfile from '../screens/profile/updateProfile/UpdateProfile';
